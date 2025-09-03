@@ -1,39 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://dwellingdb.com/</loc>
-    <lastmod>2025-09-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+    <loc>https://landing.example.com/cryptocurrency</loc>
+    <lastmod>2025-09-03T21:01:16.045255+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dwellingdb.com/pages/insurance-cheap-car-insurance-0db93723.html</loc>
-    <lastmod>2025-09-03</lastmod>
+    <loc>https://landing.example.com/bitcoin</loc>
+    <lastmod>2025-09-03T21:01:16.045276+00:00</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dwellingdb.com/pages/insurance-best-home-insurance-c0fb8e4b.html</loc>
-    <lastmod>2025-09-03</lastmod>
+    <loc>https://landing.example.com/ai</loc>
+    <lastmod>2025-09-03T21:01:16.045284+00:00</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://dwellingdb.com/pages/insurance-life-insurance-quotes-d83f3b9f.html</loc>
-    <lastmod>2025-09-03</lastmod>
+    <loc>https://landing.example.com/chatgpt</loc>
+    <lastmod>2025-09-03T21:01:16.045290+00:00</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dwellingdb.com/pages/finance-personal-loans-d67f4879.html</loc>
-    <lastmod>2025-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://dwellingdb.com/pages/finance-best-credit-cards-18e8ad96.html</loc>
-    <lastmod>2025-09-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
 </urlset>
