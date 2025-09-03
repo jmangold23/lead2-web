@@ -3,83 +3,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitcoin Trading Course - Instant Access</title>
+    <title>Bitcoin Trading Course - Instant Access | DwellingDB</title>
+    <meta name="description" content="Get instant access to Bitcoin Trading Course. Complete cryptocurrency trading masterclass. Lifetime access. 60-day guarantee.">
+    <meta name="keywords" content="bitcoin, cryptocurrency, trading course, crypto education">
+    
+    <!-- Schema.org Course Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Bitcoin Trading Course",
+        "description": "Complete cryptocurrency trading masterclass",
+        "provider": {
+            "@type": "Organization",
+            "name": "DwellingDB"
+        }
+    }
+    </script>
+    
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f8f9fa; }
-        .header { background: #1a1a2e; color: white; padding: 60px 20px; text-align: center; }
-        .container { max-width: 800px; margin: 40px auto; padding: 40px; background: white; border-radius: 10px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
-        .cta { background: #ff6b6b; color: white; padding: 20px 50px; font-size: 1.3em; border: none; border-radius: 50px; cursor: pointer; }
-        .price { font-size: 3em; color: #ff6b6b; margin: 20px 0; }
-        .guarantee { background: #f0f9ff; padding: 20px; border-left: 4px solid #3182ce; margin: 30px 0; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0e27;
+            color: white;
+        }
+        
+        /* Video Hero */
+        .video-hero {
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1e47 100%);
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        /* Content */
+        .hero-content h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-subtitle {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        /* Value Props */
+        .value-props {
+            margin: 30px 0;
+        }
+        .value-prop {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 15px 0;
+            padding: 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+        }
+        .value-icon {
+            font-size: 2em;
+            color: #48bb78;
+        }
+        
+        /* Pricing */
+        .pricing-box {
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+            border: 2px solid #667eea;
+        }
+        .price-display {
+            font-size: 3em;
+            color: #48bb78;
+            margin-bottom: 10px;
+        }
+        .price-strike {
+            text-decoration: line-through;
+            opacity: 0.5;
+            font-size: 1.5em;
+        }
+        
+        /* CTA */
+        .cta-button {
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px 50px;
+            font-size: 1.3em;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 100%;
+            margin: 20px 0;
+            transition: all 0.3s;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Video Container */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(102,126,234,0.3);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* Curriculum */
+        .curriculum {
+            padding: 60px 20px;
+            background: #f8f9fa;
+            color: #333;
+        }
+        .module {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        .module-title {
+            font-size: 1.3em;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        /* Guarantee */
+        .guarantee-section {
+            background: #1a1e47;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .guarantee-badge {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
+            .hero-content h1 {
+                font-size: 2em;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Bitcoin Trading Course</h1>
-    </div>
+    <!-- Video Hero -->
+    <section class="video-hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Bitcoin Trading Course</h1>
+                <p class="hero-subtitle">Complete cryptocurrency trading masterclass</p>
+                
+                <div class="value-props">
+                    <div class="value-prop">
+                        <span class="value-icon">🎯</span>
+                        <div>
+                            <strong>Instant Access</strong><br>
+                            Start learning immediately after purchase
+                        </div>
+                    </div>
+                    <div class="value-prop">
+                        <span class="value-icon">♾️</span>
+                        <div>
+                            <strong>Lifetime Access</strong><br>
+                            Learn at your own pace, revisit anytime
+                        </div>
+                    </div>
+                    <div class="value-prop">
+                        <span class="value-icon">📱</span>
+                        <div>
+                            <strong>Mobile Friendly</strong><br>
+                            Learn anywhere on any device
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="pricing-box">
+                    <div class="price-strike">$394.00</div>
+                    <div class="price-display">$197</div>
+                    <p>One-time payment • No hidden fees</p>
+                    
+                    <button class="cta-button" onclick="handleEnroll()">
+                        Start Learning Now
+                    </button>
+                    
+                    <!-- Affiliate Integration -->
+                    <div style="margin: 20px 0;">
+                        <a href="https://hop.clickbank.net/?affiliate=YOURID&vendor=btcmaster"><img src="https://btcmaster.com/banners/bitcoin-course-468x60.gif" alt="Bitcoin Trading Course"></a>
+                    </div>
+                    
+                    <p style="text-align: center; margin-top: 20px; opacity: 0.8;">
+                        <small>🔒 Secure checkout • 💳 All cards accepted</small>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="video-section">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            frameborder="0" allowfullscreen></iframe>
+                </div>
+                <p style="text-align: center; margin-top: 20px; opacity: 0.8;">
+                    Watch this free preview to see what's inside
+                </p>
+            </div>
+        </div>
+    </section>
     
-    <div class="container">
-        ## **Stop Gambling on Bitcoin. Start Profiting Like a Pro (Before the Next Bull Run Explodes).**  
-*Master the EXACT Crypto Trading System Used by Consistent 6-Figure Traders – Even If You’ve Lost Money Before or Have Zero Experience.*  
-
-**🔥 72-HOUR FLASH SALE: Get the FULL "Crypto Profit Accelerator" Masterclass + $1,497 in Bonuses for ONLY $197 (Normally $497)**  
-*(Price DOUBLES or Bonuses VANISH in:* **[COUNTDOWN TIMER: 71:59:59]** *)*  
-
----
-
-### **Here’s EXACTLY What You Get Inside This Life-Changing Masterclass:**  
-✅ **The "3-Phase Profit Engine" Framework:** Cut through market noise & spot *high-probability* Bitcoin trades (long AND short) before 99% of retail traders – **with step-by-step live trade walkthroughs.**  
-✅ **Risk Management Secrets of Top 1% Traders:** Never blow up your account again. Learn the *exact* position sizing, stop-loss strategies, and emotional control tactics used by Wall Street veterans.  
-✅ **Exchange Mastery Deep Dive:** Set up your Binance, Bybit, or Coinbase Pro account *safely*, avoid $10k+ rookie mistakes, and execute trades like a pro (including futures & spot).  
-✅ **The "Smart Money Indicator" Toolkit:** Get our proprietary, no-fluff set of 3 technical indicators (backtested for crypto volatility) that signal entries/exits *before* pumps and dumps.  
-
-**NO prior trading experience needed. NO confusing jargon. Just actionable steps that work in *any* market condition.**  
-
----
-
-### ⚠️ **WARNING: Bonuses VANISH at Midnight!**  
-Buy within the next **72 hours** and get these **FREE** (a $1,497 value – **YOURS TODAY at $197**):  
-1. **"Crypto Tax Slayer" Guide** ($297 Value): *Legally* minimize taxes & keep 20-35% more of your profits (IRS-compliant for US traders).  
-2. **24/7 "Market Pulse" Alert Service (3-Month Access)** ($497 Value): Get SMS alerts for *confirmed* high-conviction Bitcoin setups – straight to your phone.  
-3. **Private Community + Weekly Live Q&A** ($703 Value): Get direct access to me and veteran traders for personalized trade reviews. ***(Only 37 spots left at this price!)***  
-
-**→ After 72 hours, bonuses GONE. Price JUMPS to $394. Don’t get left holding bags while others profit.**  
-
----
-
-### **Your 100% Risk-Free Profit Guarantee (Seriously, We Mean It):**  
-**Try the Bitcoin Trading Course for 365 FULL DAYS.**  
-If you **follow the system**, complete the exercises, and *still* don’t feel confident executing profitable trades…  
-**We’ll refund EVERY PENNY – no questions asked. You keep ALL bonuses and course materials FREE.**  
-
-*Why 365 days?* Because real trading mastery takes time. We’re not selling "get rich quick" lies. We’re investing in your long-term success. **If you don’t profit, we don’t deserve your $197.**  
-
----
-
-### **🚀 STOP "HOPE-TRADING." START SYSTEMATICALLY PROFITING.**  
-Every minute you wait, Bitcoin volatility leaves money on the table. **The next 10x pump *will* happen – but will you be a spectator… or a winner?**  
-
-👉 **YES! LOCK IN MY $197 DISCOUNT + $1,497 BONUSES NOW!**  
-*(Only 37 spots left at this price – 128 traders claimed bonuses in the last 24 hours)*  
-
-[**👉 CLICK HERE TO SECURE YOUR SPOT + BONUSES BEFORE MIDNIGHT**]  
-**(Price DOUBLES or Bonuses EXPIRE in: [COUNTDOWN TIMER: 71:59:59])**  
-
-**P.S.** The *real* reason 95% of traders fail? They trade on emotion, not a proven system. **This course is your system.** But bonuses vanish at midnight – and the next price hike is coming. **Don’t gamble with your crypto future. Click the button NOW.**  
-**P.P.S. Still hesitating? Remember: That $197 is less than 0.001 BTC. But the skills you gain could multiply your portfolio 10x. Which side of the ledger do you want to be on?**  
-
----  
-*© 2023 Crypto Profit Academy | All trades involve risk. Past performance ≠ future results. This is education, not financial advice. Bonuses subject to availability. 365-day guarantee requires completion of all course modules.*
-        
-        <div style="text-align: center; margin: 40px 0;">
-            <p class="price">$197</p>
-            <a href="https://hop.clickbank.net/?affiliate=YOURID&vendor=btcmaster"><img src="https://btcmaster.com/banners/bitcoin-course-468x60.gif" alt="Bitcoin Trading Course"></a>
+    <!-- Curriculum -->
+    <section class="curriculum">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="text-align: center; font-size: 2.5em; margin-bottom: 40px;">What You'll Learn</h2>
+            
+            <div class="module">
+                <h3 class="module-title">Module 1: Foundation</h3>
+                <p>Master the fundamentals and build a solid foundation</p>
+            </div>
+            
+            <div class="module">
+                <h3 class="module-title">Module 2: Advanced Strategies</h3>
+                <p>Learn professional techniques and advanced methods</p>
+            </div>
+            
+            <div class="module">
+                <h3 class="module-title">Module 3: Real-World Application</h3>
+                <p>Apply your knowledge to real scenarios and case studies</p>
+            </div>
+            
+            <div class="module">
+                <h3 class="module-title">Bonus: Exclusive Resources</h3>
+                <p>Templates, tools, and resources worth $500+ included free</p>
+            </div>
         </div>
-        
-        <div class="guarantee">
-            <h3>30-Day Money-Back Guarantee</h3>
-            <p>If you're not completely satisfied, get a full refund. No questions asked.</p>
-        </div>
-    </div>
+    </section>
+    
+    <!-- Guarantee -->
+    <section class="guarantee-section">
+        <div class="guarantee-badge">💯</div>
+        <h2 style="font-size: 2em; margin-bottom: 20px;">60-Day Money-Back Guarantee</h2>
+        <p style="max-width: 600px; margin: 0 auto;">
+            Try Bitcoin Trading Course risk-free for 60 days. If you don't love it, 
+            get a full refund. No questions asked.
+        </p>
+    </section>
+    
+    <script>
+        function handleEnroll() {
+            console.log('Enrollment clicked:', 'bitcoin-trading-001');
+            window.open('https://hop.clickbank.net/?affiliate=YOURID&vendor=btcmaster&tid=', '_blank');
+        }
+    </script>
 </body>
 </html>
