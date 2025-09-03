@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Offers - DwellingDB</title>
+    <meta name="description" content="Browse our current offers and promotions">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { color: white; text-align: center; margin-bottom: 40px; font-size: 2.5rem; }
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .offer-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .offer-card:hover { transform: translateY(-5px); }
+        .offer-category {
+            display: inline-block;
+            padding: 5px 10px;
+            background: #e2e8f0;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            color: #4a5568;
+            margin-bottom: 10px;
+        }
+        .offer-title {
+            color: #2d3748;
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        .offer-description {
+            color: #718096;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .offer-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: opacity 0.3s;
+        }
+        .offer-link:hover { opacity: 0.9; }
+        .back-link {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        .back-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        <h1>Current Offers</h1>
+        <div class="offers-grid" id="offersGrid">
+            <!-- Offers will be loaded here -->
+        </div>
+    </div>
+    
+    <script>
+        // Current offers - this will be dynamically loaded from offers.json
+        const offers = [
+            {
+                category: 'Insurance',
+                title: 'Cheap Car Insurance',
+                description: 'Compare rates from 20+ insurers and save up to 40% on your premium',
+                url: 'insurance-cheap-car-insurance-0db93723.html'
+            },
+            {
+                category: 'Insurance',
+                title: 'Home Insurance',
+                description: 'Protect your home with comprehensive coverage at competitive rates',
+                url: 'insurance-best-home-insurance-c0fb8e4b.html'
+            },
+            {
+                category: 'Insurance',
+                title: 'Life Insurance Quotes',
+                description: 'Get instant quotes and protect your family\'s financial future',
+                url: 'insurance-life-insurance-quotes-d83f3b9f.html'
+            },
+            {
+                category: 'Finance',
+                title: 'Personal Loans',
+                description: 'Get funded quickly with rates from 5.99% APR',
+                url: 'finance-personal-loans-d67f4879.html'
+            },
+            {
+                category: 'Finance',
+                title: 'Best Credit Cards',
+                description: 'Find cards with cash back, rewards, and 0% intro APR offers',
+                url: 'finance-best-credit-cards-18e8ad96.html'
+            }
+        ];
+        
+        // Render offers
+        const grid = document.getElementById('offersGrid');
+        offers.forEach(offer => {
+            const card = document.createElement('div');
+            card.className = 'offer-card';
+            card.innerHTML = `
+                <span class="offer-category">${offer.category}</span>
+                <h2 class="offer-title">${offer.title}</h2>
+                <p class="offer-description">${offer.description}</p>
+                <a href="${offer.url}" class="offer-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            `;
+            grid.appendChild(card);
+        });
+    </script>
+</body>
+</html>
