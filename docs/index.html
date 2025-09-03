@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DwellingDB - All Pages</title>
+    <title>DwellingDB - Premium Landing Pages</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -13,7 +13,7 @@
             padding: 40px 20px;
         }
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             background: white;
             border-radius: 20px;
@@ -29,6 +29,80 @@
             color: #666;
             margin-bottom: 30px;
             font-size: 1.2em;
+        }
+        .featured-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+        .featured-title {
+            color: #333;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .featured-badge {
+            background: #667eea;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.5em;
+            font-weight: normal;
+        }
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+        }
+        .featured-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #333;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+        .featured-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+        .featured-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(102,126,234,0.2);
+            border-color: #667eea;
+        }
+        .featured-icon {
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+        .featured-card-title {
+            font-size: 1.3em;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #222;
+        }
+        .featured-card-category {
+            color: #667eea;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        .featured-card-description {
+            color: #666;
+            line-height: 1.5;
         }
         .stats {
             background: #f8f9fa;
@@ -101,30 +175,92 @@
             border-top: 1px solid #e0e0e0;
             color: #666;
         }
+        .highlight-new {
+            background: #4CAF50;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.7em;
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>🏠 DwellingDB Pages</h1>
-        <p class="subtitle">AI-Generated Landing Pages for Various Topics</p>
+        <p class="subtitle">Premium Resources and Guides for Smart Decisions</p>
         
         <div class="stats">
             <div class="stat">
-                <div class="stat-value">77</div>
+                <div class="stat-value">87</div>
                 <div class="stat-label">Total Pages</div>
             </div>
             <div class="stat">
-                <div class="stat-value">4</div>
-                <div class="stat-label">Categories</div>
+                <div class="stat-value">6</div>
+                <div class="stat-label">Featured Offers</div>
             </div>
             <div class="stat">
                 <div class="stat-value">2025-09-03</div>
                 <div class="stat-label">Last Updated</div>
             </div>
         </div>
+        
+        <div class="featured-section">
+            <h2 class="featured-title">
+                ⭐ Featured Intelligent Pages
+                <span class="featured-badge">NEW</span>
+            </h2>
+            <div class="featured-grid">
+
+                <a href="skincare-premium_bakuchiol_serum-bakuchiol-001.html" class="featured-card">
+                    <div class="featured-icon">🧴</div>
+                    <div class="featured-card-title">Premium Bakuchiol Serum</div>
+                    <div class="featured-card-category">Physical Product</div>
+                    <div class="featured-card-description">Natural retinol alternative for anti-aging</div>
+                </a>
+
+                <a href="cryptocurrency-bitcoin_trading_course-bitcoin-trading-001.html" class="featured-card">
+                    <div class="featured-icon">📚</div>
+                    <div class="featured-card-title">Bitcoin Trading Course</div>
+                    <div class="featured-card-category">Digital Product</div>
+                    <div class="featured-card-description">Complete cryptocurrency trading masterclass</div>
+                </a>
+
+                <a href="auto-auto_insurance_quotes-auto-insurance-001.html" class="featured-card">
+                    <div class="featured-icon">🚗</div>
+                    <div class="featured-card-title">Auto Insurance Quotes</div>
+                    <div class="featured-card-category">Lead Generation</div>
+                    <div class="featured-card-description">Free auto insurance quote comparison</div>
+                </a>
+
+                <a href="solar-solar_panel_installation-solar-panels-001.html" class="featured-card">
+                    <div class="featured-icon">☀️</div>
+                    <div class="featured-card-title">Solar Panel Installation</div>
+                    <div class="featured-card-category">Service</div>
+                    <div class="featured-card-description">Free solar panel installation quotes</div>
+                </a>
+
+                <a href="loans-personal_loans_up_to_$50k-personal-loans-001.html" class="featured-card">
+                    <div class="featured-icon">💰</div>
+                    <div class="featured-card-title">Personal Loans</div>
+                    <div class="featured-card-category">Lead Generation</div>
+                    <div class="featured-card-description">Quick personal loan approval up to $50K</div>
+                </a>
+
+                <a href="renovation-home_renovation_services-home-renovation-001.html" class="featured-card">
+                    <div class="featured-icon">🏠</div>
+                    <div class="featured-card-title">Home Renovation</div>
+                    <div class="featured-card-category">Service</div>
+                    <div class="featured-card-description">Professional home renovation contractors</div>
+                </a>
+
+            </div>
+        </div>
+
+        <h2 style="margin-top: 50px; margin-bottom: 30px;">📚 Additional Resources</h2>
 
         <div class="category">
-            <h2>finance (54 pages)</h2>
+            <h2>finance (58 pages)</h2>
             <div class="pages-grid">
 
                 <a href="finance-affiliate-urgency-098360791eaf.html" class="page-card">
@@ -134,6 +270,11 @@
 
                 <a href="finance-affiliate-urgency-6a24477ca5ae.html" class="page-card">
                     <div class="page-title">Affiliate Urgency</div>
+                    <div class="page-category">finance</div>
+                </a>
+
+                <a href="finance-ai-urgency-613efa29f3ff.html" class="page-card">
+                    <div class="page-title">Ai Urgency</div>
                     <div class="page-category">finance</div>
                 </a>
 
@@ -162,6 +303,11 @@
                     <div class="page-category">finance</div>
                 </a>
 
+                <a href="finance-bitcoin-urgency-36e6715806b8.html" class="page-card">
+                    <div class="page-title">Bitcoin Urgency</div>
+                    <div class="page-category">finance</div>
+                </a>
+
                 <a href="finance-bitcoin-urgency-7a6fc0851102.html" class="page-card">
                     <div class="page-title">Bitcoin Urgency</div>
                     <div class="page-category">finance</div>
@@ -177,225 +323,10 @@
                     <div class="page-category">finance</div>
                 </a>
 
-                <a href="finance-bitcoin-urgency-fadb009a5b03.html" class="page-card">
-                    <div class="page-title">Bitcoin Urgency</div>
+                <div class="page-card" style="background: #f0f0f0; cursor: default;">
+                    <div class="page-title">+46 more...</div>
                     <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-chatgpt-urgency-3cc6c1b95d4f.html" class="page-card">
-                    <div class="page-title">Chatgpt Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-chatgpt-urgency-7514cd259377.html" class="page-card">
-                    <div class="page-title">Chatgpt Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-clickbank-urgency-9f795586866b.html" class="page-card">
-                    <div class="page-title">Clickbank Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-coindesk-urgency-19d5a1718590.html" class="page-card">
-                    <div class="page-title">Coindesk Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-cryptocurrency-urgency-1c0c89f1d911.html" class="page-card">
-                    <div class="page-title">Cryptocurrency Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-cryptocurrency-urgency-43f154325958.html" class="page-card">
-                    <div class="page-title">Cryptocurrency Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-debt_consolidation_loans-urgency-79554d3cd466.html" class="page-card">
-                    <div class="page-title">Debt Consolidation Loans Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-debt_consolidation_loans-urgency-b917526f2e7d.html" class="page-card">
-                    <div class="page-title">Debt Consolidation Loans Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-economy-urgency-4e1f53ac473b.html" class="page-card">
-                    <div class="page-title">Economy Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-economy-urgency-955d231d9ee1.html" class="page-card">
-                    <div class="page-title">Economy Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-economy-urgency-9e2d7f4ec04f.html" class="page-card">
-                    <div class="page-title">Economy Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-ethereum-urgency-7bc1353c67fc.html" class="page-card">
-                    <div class="page-title">Ethereum Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-ethereum-urgency-ee63a17bb70d.html" class="page-card">
-                    <div class="page-title">Ethereum Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-fastestgrowing-urgency-97b0499736db.html" class="page-card">
-                    <div class="page-title">Fastestgrowing Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-following-urgency-4702b6c2a3df.html" class="page-card">
-                    <div class="page-title">Following Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-halving-urgency-2ecccfbcfb41.html" class="page-card">
-                    <div class="page-title">Halving Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-halving-urgency-b26cfa161e5e.html" class="page-card">
-                    <div class="page-title">Halving Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-halving-urgency-e9fd389b2dee.html" class="page-card">
-                    <div class="page-title">Halving Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-highdemand-urgency-8148c8e0b893.html" class="page-card">
-                    <div class="page-title">Highdemand Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-highdemand-urgency-b854ecb41237.html" class="page-card">
-                    <div class="page-title">Highdemand Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-hours-urgency-420e894c0905.html" class="page-card">
-                    <div class="page-title">Hours Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-leader-urgency-a29c76909272.html" class="page-card">
-                    <div class="page-title">Leader Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-leader-urgency-fde87528a660.html" class="page-card">
-                    <div class="page-title">Leader Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-north-urgency-bc9b117071fa.html" class="page-card">
-                    <div class="page-title">North Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-personal_loans-social_proof-13b4ee5c8756.html" class="page-card">
-                    <div class="page-title">Personal Loans Social Proof</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-personal_loans-social_proof-24b399e9e5ba.html" class="page-card">
-                    <div class="page-title">Personal Loans Social Proof</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-personal_loans-social_proof-5c0e8ef1f3a6.html" class="page-card">
-                    <div class="page-title">Personal Loans Social Proof</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-personal_loans_online-benefit_focused-27e95f815719.html" class="page-card">
-                    <div class="page-title">Personal Loans Online Benefit Focused</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-popular-urgency-7234a978a1e2.html" class="page-card">
-                    <div class="page-title">Popular Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-popular-urgency-8a4fc83442ea.html" class="page-card">
-                    <div class="page-title">Popular Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-price-urgency-bb453d79b8ee.html" class="page-card">
-                    <div class="page-title">Price Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-remains-urgency-4a1b07478828.html" class="page-card">
-                    <div class="page-title">Remains Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-remains-urgency-fbf7d7413ab4.html" class="page-card">
-                    <div class="page-title">Remains Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-selling-urgency-41fa08bde074.html" class="page-card">
-                    <div class="page-title">Selling Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-selling-urgency-eae5db3019ea.html" class="page-card">
-                    <div class="page-title">Selling Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-surprise-urgency-75b3688aa516.html" class="page-card">
-                    <div class="page-title">Surprise Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-surprise-urgency-d7d76bd7e916.html" class="page-card">
-                    <div class="page-title">Surprise Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-topperforming-urgency-0e724d03c583.html" class="page-card">
-                    <div class="page-title">Topperforming Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-topperforming-urgency-1a8d4a32a239.html" class="page-card">
-                    <div class="page-title">Topperforming Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-topperforming-urgency-529f44ed267e.html" class="page-card">
-                    <div class="page-title">Topperforming Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-tried-urgency-eea680930e48.html" class="page-card">
-                    <div class="page-title">Tried Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-tried-urgency-fd755b81035b.html" class="page-card">
-                    <div class="page-title">Tried Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-which-urgency-93edfc7c0e9a.html" class="page-card">
-                    <div class="page-title">Which Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
+                </div>
 
             </div>
         </div>
@@ -537,9 +468,12 @@
         </div>
 
         <div class="footer">
-            <p>Generated by LangGraph Workflow Orchestrator</p>
-            <p>© 2024 DwellingDB. All rights reserved.</p>
+            <p>© <span id="currentYear"></span> DwellingDB. All rights reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">Powered by intelligent content generation and optimization</p>
         </div>
     </div>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
