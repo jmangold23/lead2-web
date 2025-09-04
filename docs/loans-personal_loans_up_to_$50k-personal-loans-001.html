@@ -1,385 +1,53 @@
 <!DOCTYPE html>
+
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Personal Loans Up to $50K - Free Quotes in 60 Seconds | Dwel
-  </title>
-  <meta content="Get free personal loans up to $50k quotes from top providers. Compare and save. No obligation." name="description"/>
-  <style>
-   * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
-        }
-        
-        /* Header */
-        .header {
-            background: white;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #667eea;
-        }
-        .trust-indicators {
-            display: flex;
-            gap: 20px;
-        }
-        
-        /* Main Content */
-        .main-container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: start;
-        }
-        
-        /* Left Content */
-        .content-section h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-            color: #333;
-        }
-        .subtitle {
-            font-size: 1.3em;
-            margin-bottom: 30px;
-            color: #666;
-        }
-        
-        /* Benefits */
-        .benefits-list {
-            margin: 30px 0;
-        }
-        .benefit-item {
-            display: flex;
-            align-items: start;
-            gap: 15px;
-            margin: 20px 0;
-        }
-        .benefit-icon {
-            color: #48bb78;
-            font-size: 1.5em;
-            margin-top: 5px;
-        }
-        .benefit-text {
-            flex: 1;
-        }
-        .benefit-title {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        
-        /* Form Section */
-        .form-container {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-        }
-        .form-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .form-title {
-            font-size: 1.8em;
-            margin-bottom: 10px;
-        }
-        .form-subtitle {
-            color: #666;
-        }
-        
-        /* Progress Bar */
-        .progress-bar {
-            background: #e0e0e0;
-            height: 8px;
-            border-radius: 10px;
-            margin: 20px 0;
-            overflow: hidden;
-        }
-        .progress-fill {
-            background: linear-gradient(90deg, #667eea, #764ba2);
-            height: 100%;
-            width: 25%;
-            transition: width 0.3s;
-        }
-        
-        /* Form Fields */
-        .form-field {
-            margin: 20px 0;
-        }
-        .form-label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #333;
-        }
-        .form-input {
-            width: 100%;
-            padding: 15px;
-            border: 2px solid #e0e0e0;
-            border-radius: 8px;
-            font-size: 1em;
-            transition: border 0.3s;
-        }
-        .form-input:focus {
-            outline: none;
-            border-color: #667eea;
-        }
-        
-        /* Submit Button */
-        .submit-btn {
-            background: linear-gradient(90deg, #667eea, #764ba2);
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Personal Loans Up to $50K - Get Free Quotes</title>
+<style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+        .container { max-width: 600px; margin: 40px auto; padding: 40px; }
+        .form-group { margin: 20px 0; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 600; }
+        .form-group input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; }
+        .submit-btn { background: #48bb78; color: white; padding: 15px 40px; border: none; border-radius: 5px; font-size: 1.2em; cursor: pointer; width: 100%; }
+    </style>
+</head>
+<body>
+<div class="container">
+<h1>Personal Loans Up to $50K</h1><button class="cta-button" style="
+            background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
-            padding: 20px;
-            font-size: 1.3em;
             border: none;
-            border-radius: 10px;
+            border-radius: 8px;
+            padding: 16px 32px;
+            font-size: 1.2em;
+            font-weight: bold;
             cursor: pointer;
-            width: 100%;
-            margin: 20px 0;
-            transition: transform 0.3s;
-        }
-        .submit-btn:hover {
-            transform: translateY(-2px);
-        }
-        
-        /* Trust Elements */
-        .form-trust {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 20px 0;
-            font-size: 0.9em;
-            color: #666;
-        }
-        
-        /* Testimonials */
-        .testimonials {
-            margin-top: 40px;
-        }
-        .testimonial-card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 15px 0;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
-        .stars {
-            color: #ffd700;
-            margin-bottom: 10px;
-        }
-        
-        @media (max-width: 768px) {
-            .main-container {
-                grid-template-columns: 1fr;
+            min-height: 56px;
+            width: 300px;
+            display: block;
+            margin: 30px auto;
+            z-index: 999;
+            position: relative;
+        ">Get Started Now →</button>
+<p>Quick personal loan approval</p>
+<!-- Actual lead form embed or custom form -->
+<div id="loan-form-widget"></div><script src="https://widgets.leadpages.com/loan-form.js?aff=YOURID"></script>
+</div>
+<!-- Conversion tracking -->
+<img height="1" src="https://tracking.leadpages.com/pixel?aff=YOURID&amp;amount=&lt;AMOUNT&gt;" width="1"/>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var ctaButton = document.querySelector('.cta-button');
+            if (ctaButton) {
+                ctaButton.addEventListener('click', function() {
+                    console.log('CTA clicked');
+                    // Track click and redirect
+                    window.location.href = '/pages/auto-auto_insurance_quotes-auto-insurance-001.html';
+                });
             }
-        }
-  </style>
-  <meta content="Personal Loans Up to $50K - Free Quotes in 60 Seconds | Dwel" property="og:title"/>
-  <meta content="Get free personal loans up to $50k quotes from top providers. Compare and save. No obligation." property="og:description"/>
-  <meta content="website" property="og:type"/>
-  <meta content="https://dwellingdb.com/loans-personal_loans_up_to_$50k-personal-loans-001.html" property="og:url"/>
-  <meta content="https://dwellingdb.com/og-image.jpg" property="og:image"/>
-  <meta content="DwellingDB" property="og:site_name"/>
-  <meta content="summary_large_image" name="twitter:card"/>
-  <meta content="Personal Loans Up to $50K - Free Quotes in 60 Seconds | Dwel" name="twitter:title"/>
-  <meta content="Get free personal loans up to $50k quotes from top providers. Compare and save. No obligation." name="twitter:description"/>
-  <meta content="https://dwellingdb.com/og-image.jpg" name="twitter:image"/>
- </head>
- <body>
-  <div class="affiliate-disclosure" style="background: #f8f9fa; border: 1px solid #dee2e6; padding: 15px; margin: 20px 0; border-radius: 5px; font-size: 14px;">
-   Disclosure: This page contains affiliate links. We may earn a commission at no extra cost to you if you make a purchase through these links. All opinions remain our own.
-  </div>
-  <!-- Header -->
-  <header class="header">
-   <div class="header-content">
-    <div class="logo">
-     DwellingDB
-    </div>
-    <div class="trust-indicators">
-     <span>
-      🔒 SSL Secured
-     </span>
-     <span>
-      ✓ Licensed Partners
-     </span>
-     <span>
-      📞 Support Available
-     </span>
-    </div>
-   </div>
-  </header>
-  <!-- Main Content -->
-  <div class="main-container">
-   <!-- Left Content -->
-   <div class="content-section">
-    <h1>
-     Personal Loans Up to $50K
-    </h1>
-    <p class="subtitle">
-     Quick personal loan approval
-    </p>
-    <div class="benefits-list">
-     <div class="benefit-item">
-      <span class="benefit-icon">
-       ✓
-      </span>
-      <div class="benefit-text">
-       <div class="benefit-title">
-        Compare Multiple Quotes
-       </div>
-       <p>
-        Get quotes from top providers in one place
-       </p>
-      </div>
-     </div>
-     <div class="benefit-item">
-      <span class="benefit-icon">
-       ✓
-      </span>
-      <div class="benefit-text">
-       <div class="benefit-title">
-        Save Time &amp; Money
-       </div>
-       <p>
-        No need to fill multiple forms - do it once here
-       </p>
-      </div>
-     </div>
-     <div class="benefit-item">
-      <span class="benefit-icon">
-       ✓
-      </span>
-      <div class="benefit-text">
-       <div class="benefit-title">
-        No Obligation
-       </div>
-       <p>
-        Free service with no commitment required
-       </p>
-      </div>
-     </div>
-     <div class="benefit-item">
-      <span class="benefit-icon">
-       ✓
-      </span>
-      <div class="benefit-text">
-       <div class="benefit-title">
-        Instant Results
-       </div>
-       <p>
-        Get your personalized quotes in 60 seconds
-       </p>
-      </div>
-     </div>
-    </div>
-    <!-- Testimonials -->
-    <div class="testimonials">
-     <h3 style="margin-bottom: 20px;">
-      What Others Are Saying
-     </h3>
-     <div class="testimonial-card">
-      <div class="stars">
-       ★★★★★
-      </div>
-      <p>
-       "Saved $840 per year on my policy! So easy and fast."
-      </p>
-      <small>
-       <strong>
-        - Michael R.
-       </strong>
-      </small>
-     </div>
-     <div class="testimonial-card">
-      <div class="stars">
-       ★★★★★
-      </div>
-      <p>
-       "Got 5 quotes in minutes. Found the perfect coverage."
-      </p>
-      <small>
-       <strong>
-        - Lisa T.
-       </strong>
-      </small>
-     </div>
-    </div>
-   </div>
-   <!-- Form Section -->
-   <div class="form-container">
-    <div class="form-header">
-     <h2 class="form-title">
-      Get Your Free Quotes
-     </h2>
-     <p class="form-subtitle">
-      Takes only 60 seconds
-     </p>
-    </div>
-    <div class="progress-bar">
-     <div class="progress-fill">
-     </div>
-    </div>
-    <!-- Embed Code or Custom Form -->
-    <div id="loan-form-widget">
-    </div>
-    <script src="https://widgets.leadpages.com/loan-form.js?aff=YOURID">
-    </script>
-    <div class="form-trust">
-     <span>
-      🔒 Your info is secure
-     </span>
-     <span>
-      📧 No spam, ever
-     </span>
-    </div>
-   </div>
-  </div>
-  <!-- Conversion Tracking -->
-  <img height="1" src="https://tracking.leadpages.com/pixel?aff=YOURID&amp;amount=&lt;AMOUNT&gt;" width="1"/>
-  <script>
-   // Progress simulation
-        const progressFill = document.querySelector('.progress-fill');
-        const inputs = document.querySelectorAll('.form-input');
-        
-        inputs.forEach((input, index) => {
-            input.addEventListener('input', () => {
-                const progress = ((index + 1) / inputs.length) * 100;
-                progressFill.style.width = progress + '%';
-            });
         });
-        
-        // Form submission
-        document.getElementById('quote-form')?.addEventListener('submit', (e) => {
-            e.preventDefault();
-            console.log('Lead form submitted:', 'personal-loans-001');
-            // Handle form submission
-        });
-  </script>
-  <footer style="background: #212529; color: #fff; padding: 30px 0; margin-top: 50px;">
-   <div style="text-align: center; padding: 10px;">
-    <a href="/privacy-policy" style="color: #fff; margin: 0 10px;">
-     Privacy Policy
-    </a>
-    <a href="/terms-of-service" style="color: #fff; margin: 0 10px;">
-     Terms of Service
-    </a>
-   </div>
-  </footer>
- </body>
+        </script></body>
 </html>
