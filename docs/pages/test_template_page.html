@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Your Free Insurance Quote</title>
+    <meta name="description" content="Compare insurance quotes from top providers">
+    <meta property="og:title" content="Free Insurance Quotes">
+    <meta property="og:description" content="Save up to 40% on insurance">
+    <link rel="canonical" href="https://dwellingdb.com/insurance-quote">
+    
+    <style>
+        :root {
+            --primary-color: #667eea;
+            --success-color: #48bb78;
+            --text-primary: #2d3748;
+            --text-secondary: #4a5568;
+            --bg-light: #f7fafc;
+            --bg-white: #ffffff;
+            --shadow: 0 10px 40px rgba(0,0,0,0.1);
+            --min-touch-target: 44px;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        /* Accessibility & Mobile */
+        button, input, select, textarea, a {
+            min-height: var(--min-touch-target);
+            padding: 12px;
+        }
+        
+        /* Header with FTC Disclosure */
+        .disclosure-bar {
+            background: #2d3748;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        
+        .header {
+            background: var(--bg-white);
+            padding: 20px;
+            box-shadow: var(--shadow);
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .trust-badges {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--text-secondary);
+            font-size: 0.9em;
+        }
+        
+        /* Main Container */
+        .main-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: start;
+        }
+        
+        /* Content Section */
+        .content-section {
+            color: white;
+        }
+        
+        .headline {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .subheadline {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .benefits-list {
+            margin: 30px 0;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: start;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .benefit-icon {
+            color: var(--success-color);
+            font-size: 1.5em;
+            margin-top: 5px;
+        }
+        
+        .benefit-text {
+            flex: 1;
+        }
+        
+        .benefit-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        /* Form Container */
+        .form-container {
+            background: var(--bg-white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 20px;
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .form-title {
+            font-size: 1.8em;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+        }
+        
+        .form-subtitle {
+            color: var(--text-secondary);
+        }
+        
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        /* CTA Button */
+        .cta-button {
+            width: 100%;
+            background: linear-gradient(135deg, var(--primary-color), #764ba2);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            min-height: 56px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .cta-button:active {
+            transform: translateY(0);
+        }
+        
+        /* Privacy & Terms */
+        .form-footer {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+        }
+        
+        .privacy-text {
+            font-size: 0.85em;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        
+        .privacy-links {
+            margin-top: 10px;
+        }
+        
+        .privacy-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 0.9em;
+            min-height: var(--min-touch-target);
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        /* Social Proof */
+        .social-proof {
+            background: var(--bg-white);
+            padding: 60px 20px;
+            margin-top: 60px;
+        }
+        
+        .social-proof-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .testimonial {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        .stars {
+            color: #fbbf24;
+            margin-bottom: 15px;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .main-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .form-container {
+                position: static;
+            }
+            
+            .header-content {
+                justify-content: center;
+                text-align: center;
+            }
+            
+            .benefit-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        
+        /* Loading State */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .loading.active {
+            display: block;
+        }
+        
+        /* Error Handling */
+        .error-message {
+            background: #fed7d7;
+            color: #9b2c2c;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        
+        .error-message.active {
+            display: block;
+        }
+        
+        /* Success State */
+        .success-message {
+            background: #c6f6d5;
+            color: #22543d;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            display: none;
+        }
+        
+        .success-message.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- FTC Disclosure -->
+    <div class="disclosure-bar">
+        We earn commissions from partners when you click links
+    </div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">QuoteNow</div>
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <span>✓</span> SSL Secured
+                </div>
+                <div class="trust-badge">
+                    <span>✓</span> 50+ Providers
+                </div>
+                <div class="trust-badge">
+                    <span>✓</span> 2M+ Customers
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <div class="main-container">
+        <!-- Left Content -->
+        <div class="content-section">
+            <h1 class="headline">Save Up to 40% on Your Insurance</h1>
+            <p class="subheadline">Compare quotes from 50+ top providers in 60 seconds</p>
+            
+            <div class="benefits-list">
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <div class="benefit-text">
+                        <div class="benefit-title">Fast & Easy</div>
+                        <div>Get quotes in 60 seconds</div>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <div class="benefit-text">
+                        <div class="benefit-title">Top Providers</div>
+                        <div>Compare 50+ insurance companies</div>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">✓</div>
+                    <div class="benefit-text">
+                        <div class="benefit-title">Save Money</div>
+                        <div>Users save an average of $500/year</div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Additional Content -->
+            <div class="additional-content">
+                
+            </div>
+        </div>
+        
+        <!-- Form Container -->
+        <div class="form-container">
+            <div class="form-header">
+                <h2 class="form-title">Get Your Free Quote</h2>
+                <p class="form-subtitle">No obligation, no credit card required</p>
+            </div>
+            
+            <!-- Error Message -->
+            <div class="error-message" id="errorMessage"></div>
+            
+            <!-- Success Message -->
+            <div class="success-message" id="successMessage">
+                <h3>Success!</h3>
+                <p>Great! Redirecting you to quotes...</p>
+            </div>
+            
+            <!-- Form -->
+            <form id="leadForm" data-affiliate-url="https://partner.insurance.com/quote">
+                
+                <div class="form-group">
+                    <label for="zip">ZIP Code</label>
+                    <input 
+                        type="text" 
+                        id="zip" 
+                        name="zip" 
+                        placeholder="Enter ZIP"
+                        required
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="your@email.com"
+                        required
+                    >
+                </div>
+                
+                
+                <button type="submit" class="cta-button">
+                    Get Free Quote →
+                </button>
+                
+                <!-- Loading State -->
+                <div class="loading" id="loading">
+                    Processing your request...
+                </div>
+            </form>
+            
+            <!-- Privacy Footer -->
+            <div class="form-footer">
+                <p class="privacy-text">
+                    Your information is secure and never shared
+                </p>
+                <div class="privacy-links">
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="social-proof-content">
+            <h2></h2>
+            <div class="testimonials">
+                
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <p>""</p>
+                    <p><strong>- </strong></p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // Form Handler
+        document.getElementById('leadForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const form = e.target;
+            const errorMsg = document.getElementById('errorMessage');
+            const successMsg = document.getElementById('successMessage');
+            const loading = document.getElementById('loading');
+            const button = form.querySelector('.cta-button');
+            
+            // Reset states
+            errorMsg.classList.remove('active');
+            successMsg.classList.remove('active');
+            
+            // Show loading
+            loading.classList.add('active');
+            button.disabled = true;
+            
+            try {
+                // Collect form data
+                const formData = new FormData(form);
+                const data = Object.fromEntries(formData);
+                
+                // Store lead locally
+                const lead = {
+                    ...data,
+                    timestamp: new Date().toISOString(),
+                    source: window.location.href,
+                    affiliate_url: form.dataset.affiliateUrl
+                };
+                
+                // Save to localStorage as backup
+                const leads = JSON.parse(localStorage.getItem('leads') || '[]');
+                leads.push(lead);
+                localStorage.setItem('leads', JSON.stringify(leads));
+                
+                // Simulate processing
+                await new Promise(resolve => setTimeout(resolve, 1500));
+                
+                // Show success
+                successMsg.classList.add('active');
+                form.style.display = 'none';
+                
+                // Redirect to affiliate after delay
+                if (form.dataset.affiliateUrl) {
+                    setTimeout(() => {
+                        window.location.href = form.dataset.affiliateUrl;
+                    }, 2000);
+                }
+                
+            } catch (error) {
+                errorMsg.textContent = 'An error occurred. Please try again.';
+                errorMsg.classList.add('active');
+            } finally {
+                loading.classList.remove('active');
+                button.disabled = false;
+            }
+        });
+        
+        // Analytics
+        window.addEventListener('load', () => {
+            // Track page view
+            console.log('Page viewed:', window.location.href);
+        });
+    </script>
+</body>
+</html>

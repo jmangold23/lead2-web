@@ -4,22 +4,22 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Compare solar panels cost quotes and save. Free instant quotes from top providers." name="description"/>
-<title>Solar Panels Cost - Save Big Today</title>
+<meta content="Compare surprise quotes and save. Free instant quotes from top providers." name="description"/>
+<title>Surprise - Save Big Today</title>
 <!-- OpenTelemetry Browser Tracing -->
 <meta content="" name="trace-id"/>
-<meta content="2025-09-04T13:50:24.764524" name="generated-at"/>
-<meta content="solar" name="vertical"/>
-<meta content="comparison" name="approach"/>
-<meta content="solar panels cost" name="keyword"/>
+<meta content="2025-09-03T05:49:43.115641" name="generated-at"/>
+<meta content="finance" name="vertical"/>
+<meta content="urgency" name="approach"/>
+<meta content="surprise" name="keyword"/>
 <!-- Tracking pixels -->
 <script>
         // Telemetry initialization
         window.pageGeneration = {
-            vertical: 'solar',
-            approach: 'comparison',
-            keyword: 'solar panels cost',
-            generatedAt: '2025-09-04T13:50:24.764524',
+            vertical: 'finance',
+            approach: 'urgency',
+            keyword: 'surprise',
+            generatedAt: '2025-09-03T05:49:43.115641',
             aiGenerated: false
         };
     </script>
@@ -163,7 +163,7 @@
 <!-- Hero Section -->
 <section class="hero">
 <div class="container">
-<h1>Get the Best Solar Panels Cost Deals</h1><button class="cta-button" style="
+<h1>Get the Best Surprise Deals</h1><button class="cta-button" style="
             background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
             border: none;
@@ -183,6 +183,36 @@
 <a class="btn" href="#form">Get Free Quote</a>
 </div>
 </section>
+<!-- Urgency Module -->
+<div class="urgency-banner">
+<div class="container">
+<span>⚡ Limited Time Offer: Rates increase in</span>
+<span id="countdown" style="font-weight: bold; margin-left: 10px;"></span>
+</div>
+</div>
+<script>
+    // Countdown timer
+    const deadline = new Date('2024-12-31').getTime();
+    
+    const updateCountdown = () => {
+        const now = new Date().getTime();
+        const distance = deadline - now;
+        
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        
+        document.getElementById('countdown').innerHTML = 
+            days + "d " + hours + "h " + minutes + "m";
+        
+        if (distance < 0) {
+            document.getElementById('countdown').innerHTML = "EXPIRED";
+        }
+    };
+    
+    updateCountdown();
+    setInterval(updateCountdown, 60000);
+</script>
 <!-- Benefits Section -->
 <section class="benefits">
 <div class="container">
@@ -207,7 +237,7 @@
 <section class="form-section" id="form">
 <div class="form-container">
 <h2 style="text-align: center; margin-bottom: 30px;">Get Your Free Quote</h2>
-<form data-approach="comparison" data-vertical="solar" id="lead-form">
+<form data-approach="urgency" data-vertical="finance" id="lead-form">
 <div class="form-group">
 <label for="name">Full Name</label>
 <input id="name" name="name" required="" type="text"/>
@@ -224,6 +254,16 @@
 <label for="zipcode">ZIP Code</label>
 <input id="zipcode" name="zipcode" pattern="[0-9]{5}" required="" type="text"/>
 </div>
+<div class="form-group">
+<label for="amount">Loan Amount Needed</label>
+<select id="amount" name="amount" required="">
+<option value="">Select Amount</option>
+<option value="5000">$5,000 - $10,000</option>
+<option value="10000">$10,000 - $25,000</option>
+<option value="25000">$25,000 - $50,000</option>
+<option value="50000">$50,000+</option>
+</select>
+</div>
 <button class="submit-btn" type="submit">Get Free Quote</button>
 </form>
 </div>
@@ -239,9 +279,9 @@
             const data = Object.fromEntries(formData);
             
             // Add page metadata
-            data.vertical = 'solar';
-            data.approach = 'comparison';
-            data.keyword = 'solar panels cost';
+            data.vertical = 'finance';
+            data.approach = 'urgency';
+            data.keyword = 'surprise';
             data.timestamp = new Date().toISOString();
             
             // Send to tracking endpoint (will integrate with observability)
@@ -256,9 +296,9 @@
             // Track page view with observability
             const pageView = {
                 event: 'page_view',
-                vertical: 'solar',
-                approach: 'comparison',
-                keyword: 'solar panels cost',
+                vertical: 'finance',
+                approach: 'urgency',
+                keyword: 'surprise',
                 timestamp: new Date().toISOString()
             };
             
