@@ -3,477 +3,467 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DwellingDB - Premium Landing Pages</title>
+    <title>DwellingDB - Premium Affiliate Offers</title>
+    <meta name="description" content="Discover exclusive deals and premium offers across multiple categories">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
+        body { 
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            padding: 40px 20px;
         }
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 40px 0;
+            color: white;
         }
         h1 {
-            color: #333;
+            font-size: 48px;
             margin-bottom: 10px;
-            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
         .subtitle {
-            color: #666;
-            margin-bottom: 30px;
-            font-size: 1.2em;
+            font-size: 20px;
+            opacity: 0.95;
         }
-        .featured-section {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 30px;
-            border-radius: 15px;
-            margin-bottom: 40px;
-        }
-        .featured-title {
-            color: #333;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .featured-badge {
-            background: #667eea;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 0.5em;
-            font-weight: normal;
-        }
-        .featured-grid {
+        .categories {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
         }
-        .featured-card {
+        .category-card {
             background: white;
-            padding: 25px;
             border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: #333;
-            border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-        .featured-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #667eea, #764ba2);
-        }
-        .featured-card:hover {
+        .category-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(102,126,234,0.2);
-            border-color: #667eea;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
         }
-        .featured-icon {
-            font-size: 2em;
-            margin-bottom: 15px;
-        }
-        .featured-card-title {
-            font-size: 1.3em;
+        .category-title {
+            font-size: 24px;
             font-weight: 700;
-            margin-bottom: 8px;
-            color: #222;
-        }
-        .featured-card-category {
             color: #667eea;
-            font-size: 0.9em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-        }
-        .featured-card-description {
-            color: #666;
-            line-height: 1.5;
-        }
-        .stats {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-            display: flex;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-        .stat {
-            flex: 1;
-            min-width: 150px;
-        }
-        .stat-value {
-            font-size: 2em;
-            font-weight: bold;
-            color: #667eea;
-        }
-        .stat-label {
-            color: #666;
-            font-size: 0.9em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .category {
-            margin-bottom: 40px;
-        }
-        .category h2 {
-            color: #444;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #667eea;
+            margin-bottom: 15px;
             text-transform: capitalize;
         }
-        .pages-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
+        .offer-list {
+            list-style: none;
         }
-        .page-card {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            text-decoration: none;
+        .offer-item {
+            margin: 10px 0;
+        }
+        .offer-link {
             color: #333;
-            border: 2px solid transparent;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-radius: 6px;
+            transition: background 0.3s, color 0.3s;
         }
-        .page-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-color: #667eea;
-        }
-        .page-title {
-            font-weight: 600;
-            margin-bottom: 10px;
-            color: #222;
-        }
-        .page-category {
+        .offer-link:hover {
+            background: #f7f7ff;
             color: #667eea;
-            font-size: 0.9em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
         }
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #e0e0e0;
-            color: #666;
-        }
-        .highlight-new {
-            background: #4CAF50;
+        .offer-badge {
+            background: #667eea;
             color: white;
             padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 0.7em;
+            border-radius: 4px;
+            font-size: 12px;
             margin-left: 10px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 30px 0;
+            color: white;
+            opacity: 0.9;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>🏠 DwellingDB Pages</h1>
-        <p class="subtitle">Premium Resources and Guides for Smart Decisions</p>
+        <header>
+            <h1>🏠 DwellingDB</h1>
+            <p class="subtitle">Discover Premium Offers & Exclusive Deals</p>
+        </header>
         
-        <div class="stats">
-            <div class="stat">
-                <div class="stat-value">87</div>
-                <div class="stat-label">Total Pages</div>
+        <div class="categories">
+            <div class="category-card">
+                <h2 class="category-title">Auto Insurance</h2>
+                <ul class="offer-list">
+                    <li class="offer-item">
+                        <a href="auto-insurance-auto_insurance___clickbank_offer-auto-insurance-clickbank-4480.html" class="offer-link">
+                            Auto-Insurance - ClickBank Offer
+                            <span class="offer-badge">Get Quote</span>
+                        </a>
+                    </li>
+                    <li class="offer-item">
+                        <a href="auto-insurance-auto_insurance___adsterra_offer-auto-insurance-adsterra-0979.html" class="offer-link">
+                            Auto-Insurance - Adsterra Offer
+                            <span class="offer-badge">Get Quote</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="stat">
-                <div class="stat-value">6</div>
-                <div class="stat-label">Featured Offers</div>
+            <div class="category-card">
+                <h2 class="category-title">Casino</h2>
+                <ul class="offer-list">
+                    <li class="offer-item">
+                        <a href="casino-casino___clickbank_offer-casino-clickbank-8199.html" class="offer-link">
+                            Casino - ClickBank Offer
+                            <span class="offer-badge">Service</span>
+                        </a>
+                    </li>
+                    <li class="offer-item">
+                        <a href="casino-casino___adsterra_offer-casino-adsterra-6886.html" class="offer-link">
+                            Casino - Adsterra Offer
+                            <span class="offer-badge">Service</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <div class="stat">
-                <div class="stat-value">2025-09-03</div>
-                <div class="stat-label">Last Updated</div>
+            <div class="category-card">
+                <h2 class="category-title">Cbd</h2>
+                <ul class="offer-list">
+                    <li class="offer-item">
+                        <a href="cbd-cbd___clickbank_offer-cbd-clickbank-4225.html" class="offer-link">
+                            Cbd - ClickBank Offer
+                            <span class="offer-badge">Product</span>
+                        </a>
+                    </li>
+                    <li class="offer-item">
+                        <a href="cbd-cbd___adsterra_offer-cbd-adsterra-1398.html" class="offer-link">
+                            Cbd - Adsterra Offer
+                            <span class="offer-badge">Product</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h2 class="category-title">Credit Repair</h2>
+                <ul class="offer-list">
+                    <li class="offer-item">
+                        <a href="credit-repair-credit_repair___clickbank_offer-credit-repair-clickbank-6575.html" class="offer-link">
+                            Credit-Repair - ClickBank Offer
+                            <span class="offer-badge">Get Quote</span>
+                        </a>
+                    </li>
+                    <li class="offer-item">
+                        <a href="credit-repair-credit_repair___adsterra_offer-credit-repair-adsterra-1823.html" class="offer-link">
+                            Credit-Repair - Adsterra Offer
+                            <span class="offer-badge">Get Quote</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h2 class="category-title">Cryptocurrency</h2>
+                <ul class="offer-list">
+                    <li class="offer-item">
+                        <a href="cryptocurrency-cryptocurrency___clickbank_offer-cryptocurrency-clickbank-0749.html" class="offer-link">
+                            Cryptocurrency - ClickBank Offer
+                            <span class="offer-badge">Digital</span>
+                        </a>
+                    </li>
+                    <li class="offer-item">
+                        <a href="cryptocurrency-cryptocurrency___adsterra_offer-cryptocurrency-adsterra-7809.html" class="offer-link">
+                            Cryptocurrency - Adsterra Offer
+                            <span class="offer-badge">Digital</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h2 class="category-title">Dating</h2>
+                <ul class="offer-list">
+                    <li class="offer-item">
+                        <a href="dating-dating___clickbank_offer-dating-clickbank-4926.html" class="offer-link">
+                            Dating - ClickBank Offer
+                            <span class="offer-badge">Service</span>
+                        </a>
+                    </li>
+                    <li class="offer-item">
+                        <a href="dating-dating___adsterra_offer-dating-adsterra-5924.html" class="offer-link">
+                            Dating - Adsterra Offer
+                            <span class="offer-badge">Service</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h2 class="category-title">Education</h2>
+                <ul class="offer-list">
+                    <li class="offer-item">
+                        <a href="education-education___clickbank_offer-education-clickbank-0797.html" class="offer-link">
+                            Education - ClickBank Offer
+                            <span class="offer-badge">Digital</span>
+                        </a>
+                    </li>
+                    <li class="offer-item">
+                        <a href="education-education___adsterra_offer-education-adsterra-8765.html" class="offer-link">
+                            Education - Adsterra Offer
+                            <span class="offer-badge">Digital</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h2 class="category-title">Finance</h2>
+                <ul class="offer-list">
+                    <li class="offer-item">
+                        <a href="finance-finance___clickbank_offer-finance-clickbank-8231.html" class="offer-link">
+                            Finance - ClickBank Offer
+                            <span class="offer-badge">Service</span>
+                        </a>
+                    </li>
+                    <li class="offer-item">
+                        <a href="finance-finance___adsterra_offer-finance-adsterra-8501.html" class="offer-link">
+                            Finance - Adsterra Offer
+                            <span class="offer-badge">Service</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h2 class="category-title">Forex</h2>
+                <ul class="offer-list">
+                    <li class="offer-item">
+                        <a href="forex-forex___clickbank_offer-forex-clickbank-6534.html" class="offer-link">
+                            Forex - ClickBank Offer
+                            <span class="offer-badge">Digital</span>
+                        </a>
+                    </li>
+                    <li class="offer-item">
+                        <a href="forex-forex___adsterra_offer-forex-adsterra-8859.html" class="offer-link">
+                            Forex - Adsterra Offer
+                            <span class="offer-badge">Digital</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h2 class="category-title">Gaming</h2>
+                <ul class="offer-list">
+                    <li class="offer-item">
+                        <a href="gaming-gaming___clickbank_offer-gaming-clickbank-1714.html" class="offer-link">
+                            Gaming - ClickBank Offer
+                            <span class="offer-badge">Digital</span>
+                        </a>
+                    </li>
+                    <li class="offer-item">
+                        <a href="gaming-gaming___adsterra_offer-gaming-adsterra-4475.html" class="offer-link">
+                            Gaming - Adsterra Offer
+                            <span class="offer-badge">Digital</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h2 class="category-title">Health</h2>
+                <ul class="offer-list">
+                    <li class="offer-item">
+                        <a href="health-health___clickbank_offer-health-clickbank-5196.html" class="offer-link">
+                            Health - ClickBank Offer
+                            <span class="offer-badge">Service</span>
+                        </a>
+                    </li>
+                    <li class="offer-item">
+                        <a href="health-health___adsterra_offer-health-adsterra-4456.html" class="offer-link">
+                            Health - Adsterra Offer
+                            <span class="offer-badge">Service</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h2 class="category-title">Home Services</h2>
+                <ul class="offer-list">
+                    <li class="offer-item">
+                        <a href="home-services-home_services___clickbank_offer-home-services-clickbank-3801.html" class="offer-link">
+                            Home-Services - ClickBank Offer
+                            <span class="offer-badge">Service</span>
+                        </a>
+                    </li>
+                    <li class="offer-item">
+                        <a href="home-services-home_services___adsterra_offer-home-services-adsterra-3307.html" class="offer-link">
+                            Home-Services - Adsterra Offer
+                            <span class="offer-badge">Service</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h2 class="category-title">Insurance</h2>
+                <ul class="offer-list">
+                    <li class="offer-item">
+                        <a href="insurance-insurance___clickbank_offer-insurance-clickbank-3846.html" class="offer-link">
+                            Insurance - ClickBank Offer
+                            <span class="offer-badge">Get Quote</span>
+                        </a>
+                    </li>
+                    <li class="offer-item">
+                        <a href="insurance-insurance___adsterra_offer-insurance-adsterra-0975.html" class="offer-link">
+                            Insurance - Adsterra Offer
+                            <span class="offer-badge">Get Quote</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h2 class="category-title">Loans</h2>
+                <ul class="offer-list">
+                    <li class="offer-item">
+                        <a href="loans-loans___clickbank_offer-loans-clickbank-0847.html" class="offer-link">
+                            Loans - ClickBank Offer
+                            <span class="offer-badge">Get Quote</span>
+                        </a>
+                    </li>
+                    <li class="offer-item">
+                        <a href="loans-loans___adsterra_offer-loans-adsterra-1073.html" class="offer-link">
+                            Loans - Adsterra Offer
+                            <span class="offer-badge">Get Quote</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h2 class="category-title">Male Enhancement</h2>
+                <ul class="offer-list">
+                    <li class="offer-item">
+                        <a href="male-enhancement-male_enhancement___clickbank_offer-male-enhancement-clickbank-5612.html" class="offer-link">
+                            Male-Enhancement - ClickBank Offer
+                            <span class="offer-badge">Product</span>
+                        </a>
+                    </li>
+                    <li class="offer-item">
+                        <a href="male-enhancement-male_enhancement___adsterra_offer-male-enhancement-adsterra-2385.html" class="offer-link">
+                            Male-Enhancement - Adsterra Offer
+                            <span class="offer-badge">Product</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h2 class="category-title">Renovation</h2>
+                <ul class="offer-list">
+                    <li class="offer-item">
+                        <a href="renovation-renovation___clickbank_offer-renovation-clickbank-2634.html" class="offer-link">
+                            Renovation - ClickBank Offer
+                            <span class="offer-badge">Service</span>
+                        </a>
+                    </li>
+                    <li class="offer-item">
+                        <a href="renovation-renovation___adsterra_offer-renovation-adsterra-3500.html" class="offer-link">
+                            Renovation - Adsterra Offer
+                            <span class="offer-badge">Service</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h2 class="category-title">Skincare</h2>
+                <ul class="offer-list">
+                    <li class="offer-item">
+                        <a href="skincare-skincare___clickbank_offer-skincare-clickbank-7032.html" class="offer-link">
+                            Skincare - ClickBank Offer
+                            <span class="offer-badge">Product</span>
+                        </a>
+                    </li>
+                    <li class="offer-item">
+                        <a href="skincare-skincare___adsterra_offer-skincare-adsterra-2425.html" class="offer-link">
+                            Skincare - Adsterra Offer
+                            <span class="offer-badge">Product</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h2 class="category-title">Software</h2>
+                <ul class="offer-list">
+                    <li class="offer-item">
+                        <a href="software-software___clickbank_offer-software-clickbank-3614.html" class="offer-link">
+                            Software - ClickBank Offer
+                            <span class="offer-badge">Digital</span>
+                        </a>
+                    </li>
+                    <li class="offer-item">
+                        <a href="software-software___adsterra_offer-software-adsterra-8398.html" class="offer-link">
+                            Software - Adsterra Offer
+                            <span class="offer-badge">Digital</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h2 class="category-title">Solar</h2>
+                <ul class="offer-list">
+                    <li class="offer-item">
+                        <a href="solar-solar___clickbank_offer-solar-clickbank-0619.html" class="offer-link">
+                            Solar - ClickBank Offer
+                            <span class="offer-badge">Get Quote</span>
+                        </a>
+                    </li>
+                    <li class="offer-item">
+                        <a href="solar-solar___adsterra_offer-solar-adsterra-1480.html" class="offer-link">
+                            Solar - Adsterra Offer
+                            <span class="offer-badge">Get Quote</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h2 class="category-title">Sports Betting</h2>
+                <ul class="offer-list">
+                    <li class="offer-item">
+                        <a href="sports-betting-sports_betting___clickbank_offer-sports-betting-clickbank-7049.html" class="offer-link">
+                            Sports-Betting - ClickBank Offer
+                            <span class="offer-badge">Service</span>
+                        </a>
+                    </li>
+                    <li class="offer-item">
+                        <a href="sports-betting-sports_betting___adsterra_offer-sports-betting-adsterra-3198.html" class="offer-link">
+                            Sports-Betting - Adsterra Offer
+                            <span class="offer-badge">Service</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h2 class="category-title">Weight Loss</h2>
+                <ul class="offer-list">
+                    <li class="offer-item">
+                        <a href="weight-loss-weight_loss___clickbank_offer-weight-loss-clickbank-0281.html" class="offer-link">
+                            Weight-Loss - ClickBank Offer
+                            <span class="offer-badge">Product</span>
+                        </a>
+                    </li>
+                    <li class="offer-item">
+                        <a href="weight-loss-weight_loss___adsterra_offer-weight-loss-adsterra-5487.html" class="offer-link">
+                            Weight-Loss - Adsterra Offer
+                            <span class="offer-badge">Product</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
         
-        <div class="featured-section">
-            <h2 class="featured-title">
-                ⭐ Featured Intelligent Pages
-                <span class="featured-badge">NEW</span>
-            </h2>
-            <div class="featured-grid">
-
-                <a href="skincare-premium_bakuchiol_serum-bakuchiol-001.html" class="featured-card">
-                    <div class="featured-icon">🧴</div>
-                    <div class="featured-card-title">Premium Bakuchiol Serum</div>
-                    <div class="featured-card-category">Physical Product</div>
-                    <div class="featured-card-description">Natural retinol alternative for anti-aging</div>
-                </a>
-
-                <a href="cryptocurrency-bitcoin_trading_course-bitcoin-trading-001.html" class="featured-card">
-                    <div class="featured-icon">📚</div>
-                    <div class="featured-card-title">Bitcoin Trading Course</div>
-                    <div class="featured-card-category">Digital Product</div>
-                    <div class="featured-card-description">Complete cryptocurrency trading masterclass</div>
-                </a>
-
-                <a href="auto-auto_insurance_quotes-auto-insurance-001.html" class="featured-card">
-                    <div class="featured-icon">🚗</div>
-                    <div class="featured-card-title">Auto Insurance Quotes</div>
-                    <div class="featured-card-category">Lead Generation</div>
-                    <div class="featured-card-description">Free auto insurance quote comparison</div>
-                </a>
-
-                <a href="solar-solar_panel_installation-solar-panels-001.html" class="featured-card">
-                    <div class="featured-icon">☀️</div>
-                    <div class="featured-card-title">Solar Panel Installation</div>
-                    <div class="featured-card-category">Service</div>
-                    <div class="featured-card-description">Free solar panel installation quotes</div>
-                </a>
-
-                <a href="loans-personal_loans_up_to_$50k-personal-loans-001.html" class="featured-card">
-                    <div class="featured-icon">💰</div>
-                    <div class="featured-card-title">Personal Loans</div>
-                    <div class="featured-card-category">Lead Generation</div>
-                    <div class="featured-card-description">Quick personal loan approval up to $50K</div>
-                </a>
-
-                <a href="renovation-home_renovation_services-home-renovation-001.html" class="featured-card">
-                    <div class="featured-icon">🏠</div>
-                    <div class="featured-card-title">Home Renovation</div>
-                    <div class="featured-card-category">Service</div>
-                    <div class="featured-card-description">Professional home renovation contractors</div>
-                </a>
-
-            </div>
-        </div>
-
-        <h2 style="margin-top: 50px; margin-bottom: 30px;">📚 Additional Resources</h2>
-
-        <div class="category">
-            <h2>finance (58 pages)</h2>
-            <div class="pages-grid">
-
-                <a href="finance-affiliate-urgency-098360791eaf.html" class="page-card">
-                    <div class="page-title">Affiliate Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-affiliate-urgency-6a24477ca5ae.html" class="page-card">
-                    <div class="page-title">Affiliate Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-ai-urgency-613efa29f3ff.html" class="page-card">
-                    <div class="page-title">Ai Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-ai-urgency-82b29f56a2ba.html" class="page-card">
-                    <div class="page-title">Ai Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-ai-urgency-a3df2051b0b2.html" class="page-card">
-                    <div class="page-title">Ai Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-bad_credit_loans-problem_solution-3143acdf35d3.html" class="page-card">
-                    <div class="page-title">Bad Credit Loans Problem Solution</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-bakuchiol-urgency-40f88b551092.html" class="page-card">
-                    <div class="page-title">Bakuchiol Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-bitcoin-urgency-0b5070fd33ab.html" class="page-card">
-                    <div class="page-title">Bitcoin Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-bitcoin-urgency-36e6715806b8.html" class="page-card">
-                    <div class="page-title">Bitcoin Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-bitcoin-urgency-7a6fc0851102.html" class="page-card">
-                    <div class="page-title">Bitcoin Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-bitcoin-urgency-7dabf2dbddb5.html" class="page-card">
-                    <div class="page-title">Bitcoin Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <a href="finance-bitcoin-urgency-ba0f3d0e11d2.html" class="page-card">
-                    <div class="page-title">Bitcoin Urgency</div>
-                    <div class="page-category">finance</div>
-                </a>
-
-                <div class="page-card" style="background: #f0f0f0; cursor: default;">
-                    <div class="page-title">+46 more...</div>
-                    <div class="page-category">finance</div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="category">
-            <h2>home_services (7 pages)</h2>
-            <div class="pages-grid">
-
-                <a href="home_services-bathroom_remodeling-problem_solution-75d6726a3ff4.html" class="page-card">
-                    <div class="page-title">Bathroom Remodeling Problem Solution</div>
-                    <div class="page-category">home_services</div>
-                </a>
-
-                <a href="home_services-bathroom_remodeling-problem_solution-adfdc80af0b9.html" class="page-card">
-                    <div class="page-title">Bathroom Remodeling Problem Solution</div>
-                    <div class="page-category">home_services</div>
-                </a>
-
-                <a href="home_services-home_renovation-benefit_focused-5aca4dad3b5a.html" class="page-card">
-                    <div class="page-title">Home Renovation Benefit Focused</div>
-                    <div class="page-category">home_services</div>
-                </a>
-
-                <a href="home_services-home_renovation-benefit_focused-a4346f517a70.html" class="page-card">
-                    <div class="page-title">Home Renovation Benefit Focused</div>
-                    <div class="page-category">home_services</div>
-                </a>
-
-                <a href="home_services-home_renovation-benefit_focused-b5d73b4c2c3e.html" class="page-card">
-                    <div class="page-title">Home Renovation Benefit Focused</div>
-                    <div class="page-category">home_services</div>
-                </a>
-
-                <a href="home_services-kitchen_renovation-social_proof-2b38ddc4f109.html" class="page-card">
-                    <div class="page-title">Kitchen Renovation Social Proof</div>
-                    <div class="page-category">home_services</div>
-                </a>
-
-                <a href="home_services-roof_repair_services-urgency-adf0c0f52220.html" class="page-card">
-                    <div class="page-title">Roof Repair Services Urgency</div>
-                    <div class="page-category">home_services</div>
-                </a>
-
-            </div>
-        </div>
-
-        <div class="category">
-            <h2>insurance (9 pages)</h2>
-            <div class="pages-grid">
-
-                <a href="insurance-auto_insurance_quotes-social_proof-9b69681a45f4.html" class="page-card">
-                    <div class="page-title">Auto Insurance Quotes Social Proof</div>
-                    <div class="page-category">insurance</div>
-                </a>
-
-                <a href="insurance-cheap_car_insurance-reciprocity-44077bd5e4ac.html" class="page-card">
-                    <div class="page-title">Cheap Car Insurance Reciprocity</div>
-                    <div class="page-category">insurance</div>
-                </a>
-
-                <a href="insurance-cheap_car_insurance-urgency-6b5c81a7fc88.html" class="page-card">
-                    <div class="page-title">Cheap Car Insurance Urgency</div>
-                    <div class="page-category">insurance</div>
-                </a>
-
-                <a href="insurance-cheap_car_insurance-urgency-841ac3b2beef.html" class="page-card">
-                    <div class="page-title">Cheap Car Insurance Urgency</div>
-                    <div class="page-category">insurance</div>
-                </a>
-
-                <a href="insurance-cheap_car_insurance-urgency-bf40648a27e2.html" class="page-card">
-                    <div class="page-title">Cheap Car Insurance Urgency</div>
-                    <div class="page-category">insurance</div>
-                </a>
-
-                <a href="insurance-health_insurance_plans-comparison-edd41ff1d114.html" class="page-card">
-                    <div class="page-title">Health Insurance Plans Comparison</div>
-                    <div class="page-category">insurance</div>
-                </a>
-
-                <a href="insurance-home_insurance_deals-urgency-52137cf743c3.html" class="page-card">
-                    <div class="page-title">Home Insurance Deals Urgency</div>
-                    <div class="page-category">insurance</div>
-                </a>
-
-                <a href="insurance-life_insurance_rates-comparison-292b09de09f5.html" class="page-card">
-                    <div class="page-title">Life Insurance Rates Comparison</div>
-                    <div class="page-category">insurance</div>
-                </a>
-
-                <a href="insurance-life_insurance_rates-scarcity-d4c8c52f2134.html" class="page-card">
-                    <div class="page-title">Life Insurance Rates Scarcity</div>
-                    <div class="page-category">insurance</div>
-                </a>
-
-            </div>
-        </div>
-
-        <div class="category">
-            <h2>solar (7 pages)</h2>
-            <div class="pages-grid">
-
-                <a href="solar-residential_solar_systems-authority-9ba3265e3dba.html" class="page-card">
-                    <div class="page-title">Residential Solar Systems Authority</div>
-                    <div class="page-category">solar</div>
-                </a>
-
-                <a href="solar-solar_energy_savings-comparison-b71f2f11b42e.html" class="page-card">
-                    <div class="page-title">Solar Energy Savings Comparison</div>
-                    <div class="page-category">solar</div>
-                </a>
-
-                <a href="solar-solar_panel_installation-benefit_focused-0402f424eab8.html" class="page-card">
-                    <div class="page-title">Solar Panel Installation Benefit Focused</div>
-                    <div class="page-category">solar</div>
-                </a>
-
-                <a href="solar-solar_panel_installation-benefit_focused-c36cf2c59e54.html" class="page-card">
-                    <div class="page-title">Solar Panel Installation Benefit Focused</div>
-                    <div class="page-category">solar</div>
-                </a>
-
-                <a href="solar-solar_panels_cost-comparison-147dcc89a49c.html" class="page-card">
-                    <div class="page-title">Solar Panels Cost Comparison</div>
-                    <div class="page-category">solar</div>
-                </a>
-
-                <a href="solar-solar_panels_cost-comparison-2c7f616dae72.html" class="page-card">
-                    <div class="page-title">Solar Panels Cost Comparison</div>
-                    <div class="page-category">solar</div>
-                </a>
-
-                <a href="solar-solar_panels_cost-comparison-786977f9f2ba.html" class="page-card">
-                    <div class="page-title">Solar Panels Cost Comparison</div>
-                    <div class="page-category">solar</div>
-                </a>
-
-            </div>
-        </div>
-
-        <div class="footer">
-            <p>© <span id="currentYear"></span> DwellingDB. All rights reserved.</p>
-            <p style="margin-top: 10px; font-size: 0.9em;">Powered by intelligent content generation and optimization</p>
-        </div>
+        <footer>
+            <p>&copy; 2025 DwellingDB. All Rights Reserved.</p>
+            <p>Your trusted source for premium offers and exclusive deals.</p>
+        </footer>
     </div>
-    <script>
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-    </script>
 </body>
 </html>
